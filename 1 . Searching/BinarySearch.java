@@ -52,3 +52,33 @@ public class BinarySearch {
         sc.close();
     }
 }
+/*  Import Statements:
+
+The code begins with import statements for java.util.Arrays and java.util.Scanner, which are necessary for sorting an array and taking input from the user, respectively.
+binarySearch Method:
+
+This method performs the binary search algorithm. It takes two parameters: an integer array arr (sorted in ascending order) and an integer target that you want to find in the array.
+It initializes two pointers, left and right, to the start and end of the array, respectively.
+Inside a while loop, it calculates the middle index, mid, of the current range.
+
+It then compares the element at index mid with the target:
+If they are equal, it returns mid as the index where the target was found.
+If the element at mid is less than the target, it narrows the search to the right half of the array by updating left to mid + 1.
+If the element at mid is greater than the target, it narrows the search to the left half of the array by updating right to mid - 1.
+
+The loop continues until left is less than or equal to right. If the target is not found during this process, the method returns -1.
+main Method:
+
+The main method is the entry point of the program.
+It creates a Scanner object, sc, to read user input from the console.
+
+It prompts the user to enter the length of a sorted array and reads this value into the len variable.
+It creates an integer array, arr, with a length of len.
+It prompts the user to enter the sorted elements of the array one by one and populates the arr array.
+
+It asks the user to input the element they want to search for and stores it in the target variable.
+Before performing the binary search, the code sorts the arr array using Arrays.sort(arr).
+
+It then calls the binarySearch method to find the target in the sorted array.
+Depending on the result of the search, it either prints the index where the element was found or informs the user that the element was not found.
+Finally, the program closes the Scanner object to release resources. */
